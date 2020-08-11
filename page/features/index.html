@@ -13,7 +13,7 @@
       
       
       <link rel="shortcut icon" href="../../screenshots/logo.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.5">
     
     
       
@@ -21,7 +21,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.947af8d5.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.63b94e9e.min.css">
       
       
     
@@ -365,6 +365,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#launchjson-support" class="md-nav__link">
+    launch.json support
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -657,6 +664,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#launchjson-support" class="md-nav__link">
+    launch.json support
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -688,7 +702,7 @@
 <li>Threads</li>
 <li>Multiple simultaneous debug sessions</li>
 <li>Evaluating statements</li>
-<li>Debug/Run configurations</li>
+<li>Debug/Run configurations (also with launch.json files)</li>
 <li>Expressions</li>
 </ul>
 <h2 id="debugger-commands">Debugger commands<a class="headerlink" href="#debugger-commands" title="Permanent link">#</a></h2>
@@ -894,6 +908,16 @@ breakpoints. The REPL has the same features as regular emacs shells
 (e.g. command history, <code>C-p/n</code> navigation through history, etc.) in
 addition to optional <code>company-mode</code> autocompletion.
 <img alt="" src="screenshots/dap-ui-repl.png" /></p>
+<h2 id="launchjson-support">launch.json support<a class="headerlink" href="#launchjson-support" title="Permanent link">#</a></h2>
+<p>DAP supports <code>launch.json</code> files out of the box, and there is nothing that needs
+to be enabled. All that needs to be done is to add a <code>launch.json</code> file at the
+project root and to run <code>dap-debug</code>. All configurations stored in the
+<code>launch.json</code> will automatically show up in the selection. <code>launch.json</code> files in
+DAP are just like in VSCode and even support variables. See:</p>
+<ul>
+<li><a href="https://code.visualstudio.com/docs/editor/debugging">launch.json</a></li>
+<li><a href="https://code.visualstudio.com/docs/editor/variables-reference">launch.json variables</a></li>
+</ul>
                 
                   
                     
@@ -902,7 +926,7 @@ addition to optional <code>company-mode</code> autocompletion.
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 7, 2020</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">August 11, 2020</span>
     
   </small>
 </div>
@@ -1004,7 +1028,7 @@ addition to optional <code>company-mode</code> autocompletion.
       
     </div>
     
-      <script src="../../assets/javascripts/vendor.c3dc8c49.min.js"></script>
+      <script src="../../assets/javascripts/vendor.d1f5a259.min.js"></script>
       <script src="../../assets/javascripts/bundle.f9edbbd5.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
       
       <script>
@@ -1012,7 +1036,7 @@ addition to optional <code>company-mode</code> autocompletion.
           base: "../..",
           features: ["tabs"],
           search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.8e2cddea.min.js"
+            worker: "../../assets/javascripts/worker/search.fae956e7.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
