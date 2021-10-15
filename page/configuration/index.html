@@ -465,6 +465,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#swi-prolog" class="md-nav__link">
+    SWI-Prolog
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#native-debug-gdblldb" class="md-nav__link">
     Native Debug (GDB/LLDB)
   </a>
@@ -501,6 +508,13 @@
         <li class="md-nav__item">
   <a href="#powershell" class="md-nav__link">
     Powershell
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netcoredbg" class="md-nav__link">
+    Netcoredbg
   </a>
   
 </li>
@@ -801,6 +815,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#swi-prolog" class="md-nav__link">
+    SWI-Prolog
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#native-debug-gdblldb" class="md-nav__link">
     Native Debug (GDB/LLDB)
   </a>
@@ -837,6 +858,13 @@
         <li class="md-nav__item">
   <a href="#powershell" class="md-nav__link">
     Powershell
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netcoredbg" class="md-nav__link">
+    Netcoredbg
   </a>
   
 </li>
@@ -1092,6 +1120,17 @@ under linux with node.</p>
 <p>Start debugging by selecting "PHP Run Configuration" from the
 <code>dap-debug</code> menu, issue the debug request in your browser by choosing
 the running thread (<code>dap-switch-thread</code>) and then <code>dap-step-in</code>.</p>
+<h2 id="swi-prolog">SWI-Prolog<a class="headerlink" href="#swi-prolog" title="Permanent link">#</a></h2>
+<ol>
+<li>With SWI-Prolog <a href="https://www.swi-prolog.org/Download.html">installed</a>,
+   run the following command to build and install the debug adapter executable <code>swipl_debug_adapter</code>:
+   <div class="highlight"><pre><span></span><code>swipl -g <span class="s2">&quot;pack_install(debug_adapter)&quot;</span> -t halt
+</code></pre></div></li>
+<li>Add the following line to your Emacs setup:
+   <div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;dap-swi-prolog</span><span class="p">)</span>
+</code></pre></div></li>
+<li>Run <code>dap-debug</code> in a Prolog buffer and start debugging.</li>
+</ol>
 <h2 id="native-debug-gdblldb">Native Debug (GDB/LLDB)<a class="headerlink" href="#native-debug-gdblldb" title="Permanent link">#</a></h2>
 <p>Using <a href="https://github.com/WebFreak001/code-debug">https://github.com/WebFreak001/code-debug</a></p>
 <ol>
@@ -1336,6 +1375,16 @@ Debugging</a>.</p>
 </code></pre></div>
 <p>Start debugging by selecting "Powershell: Launch Script" from
 <code>dap-debug</code> menu.</p>
+<h2 id="netcoredbg">Netcoredbg<a class="headerlink" href="#netcoredbg" title="Permanent link">#</a></h2>
+<p><a href="https://github.com/Samsung/netcoredbg">Netcoredbg</a> is debugger that supports C#, F# and probably other
+languages of Dotnet platform.</p>
+<div class="highlight"><pre><span></span><code><span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;dap-netcore</span><span class="p">)</span>
+</code></pre></div>
+<p>If you have Emacs 26 or older or if your Emacs built wilthout libxml2
+support you also need customize <code>dap-netcore-download-url</code>:</p>
+<p><code>M-x</code> <code>customize</code> <code>RET</code> <code>dap-netcore-download-url</code> <code>RET</code></p>
+<p>Start debugging by selecting ".Net Core Launch (Console)" or ".Net
+Core Attach (Console)" from <code>dap-debug</code> menu.</p>
                 
                   
                     
@@ -1344,7 +1393,7 @@ Debugging</a>.</p>
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 13, 2021</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 13, 2021</span>
     
   </small>
 </div>
